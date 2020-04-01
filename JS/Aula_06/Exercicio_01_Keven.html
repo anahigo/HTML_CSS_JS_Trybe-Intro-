@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width"/>
+    <title>JavaScript - Eventos </title>
+  </head>
+  <body>
+    <!--comandos html - eventos - onload -->
+    <!--comandos html - addEventListener -->
+    <h4>Meu Botão</h4>
+    <button id="btn">Click</button>
+    <script> 
+    // comandos js - eventos - onload 
+        console.log ('pagina carregando')
+        window.onload = function (){
+            console.log('pagina carregada com sucesso')
+        }
+
+        window.onload = function (){
+            alert('pagina carregou')
+        }
+        alert("pagina carregada")
+    //comandos js -  addEventListener 
+       var botao = document.getElementById("btn");
+       botao.addEventListener('click', function(){
+            alert("você clicou")
+       })
+
+       elemento.adicionarevento('nome do evento', funcao que executa pós evento )
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width"/>
+    <title>JavaScript - Trabalhando com elementos </title>
+  </head>
+  <body>
+    <!--comandos html - elemento -->
+    <div id="paiDoPai">
+        <div id="pai"> 
+            <div id="primeiroFilho"></div>
+            <div id="elementoOndeVoceEsta">
+                <div id="primeiroFilhoDoFilho"></div>
+                <div id="segundorimeiroFilhoEUltimoFilhoDoFilho"></div>
+            </div>
+            Atenção!
+            <div id="terceiroFilho"></div>
+            <div id="quartoEUltimoFilho"></div>
+        </div>
+    </div>
+    <script> 
+    //ParteIII
+    //Remova todos os elementos da página, menos pai, elementoOndeVoceEsta e primeiroFilhoDoFilho.
+    document.getElementById("elementoOndeVoceEsta").removeChild("primeiroFilhoDoFilho");
+    document.getElementById("elementoOndeVoceEsta").removeChild("segundoEUltimoFilhoDoFilho");
+    document.getElementById("pai").removeChild("primeiroFilho");
+    document.getElementById("pai").removeChild("elementoOndeVoceEsta");
+    document.getElementById("pai").removeChild("terceiroFilho");
+    document.getElementById("pai").removeChild("quartoEUltimoFilho");
+    document.getElementById("pai").remove("paiDoPai");
+    </script>
+</body>
+</html>
