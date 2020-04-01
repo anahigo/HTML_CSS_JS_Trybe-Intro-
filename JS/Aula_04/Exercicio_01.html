@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 4.4</title>
+
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Exercício 4.4 - JavaEscripito </h1>
+    <div class="main-content">
+      <div class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </div>
+    </div>
+    <script>
+
+/* Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
+  - document.getElementById()
+  - document.getElementsByClassName()
+  - document.getElementsByTagName()
+ 1 - Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
+ 2 - Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe.
+ 3 - Crie uma função que mude a cor do quadrado vermelho para branco.
+ 4 - Crie uma função que corrija o texto da tag <h1>.
+ 5 - Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+ 6 - Crie uma função que exiba o conteúdo de todas as tags <p> no console. */
+      //1 - validado
+      function changePersonDescription(text) {
+        document.getElementsByTagName('p')[1].innerHTML = text;
+      } 
+
+      changePersonDescription("Eu quero estar na Trybe"); 
+
+      //2 - validado
+      function changeColor(element, color) {
+        document.getElementsByClassName(element)[0].style.backgroundColor = color;
+      }
+
+      changeColor('main-content', "#0FA36B");
+
+      //3 - validado
+      changeColor('center-content', "#FFFFFF");
+
+      //4 - validado
+      function changeText(element, text) {
+        document.querySelector(element).innerHTML = text;
+      }
+
+      changeText('h1', 'Exercício 4.4 - JavaScript')
+
+      // 5 - validado
+      function toUpperCase(element) {
+        let text = document.getElementsByTagName(element);
+        for(let i = 0; i < text.length; i += 1){
+          text[i].innerHTML = text[i].innerHTML.toUpperCase();
+        }
+      }
+      
+      toUpperCase('p');
+
+      //6 
+      function showInConsole(element) {
+        let element = document.getElementsByTagName(element);
+        for(let i = 0; i < text.length; i += 1) {
+          console.log(element[i].innerHTML);
+        }
+      }
+
+      showInConsole('p')
+
+      //All text
+      function changeAllTexts(query, text) {
+        let elements = document.querySelectorAll(query);
+        for(let i = 0; i < elements.length; i += 1) {
+          elements[i].innerHTML = text;
+        }
+      }
+
+      changeAllTexts('h2', 'Novo texto')
+    </script>
+  </body>
+</html>
+
+
