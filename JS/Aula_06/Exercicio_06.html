@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Cat Walk</title>
+ </head>
+ <body>
+  
+  <img style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
+  
+ </body>
+</html>
+Add a script tag at the bottom of the page, where you'll put all your code.
+Create a variable to store a reference to the img.
+Change the style of the img to have a "left" of "0px", so that it starts at the left hand of the screens.
+Create a function called catWalk() that moves the cat 10 pixels to the right of where it started, by changing the "left" style property.
+Call that function every 50 milliseconds. Your cat should now be moving across the screen from left to right. Hurrah!
+
+See Solution
+
+Bonus #1: When the cat reaches the right-hand of the screen, restart them at the left hand side ("0px"). So they should keep walking from left to right across the screen, forever and ever.
+
+See Solution
+
+Bonus #2: When the cat reaches the right-hand of the screen, make them move backwards instead. They should keep walking back and forth forever and ever.
+
+See Solution
+
+Bonus #3: When the cat reaches the middle of the screen, replace the img with an image of a cat dancing, keep it dancing for 10 seconds, and then replace the img with the original image and have it continue the walk.
+Adicione uma tag de script na parte inferior da página, onde você colocará todo o seu código.
+Crie uma variável para armazenar uma referência ao img.
+Altere o estilo de imgpara ter uma "esquerda" de "0px", para que comece na mão esquerda das telas.
+Crie uma função chamada catWalk()que move o gato 10 pixels para a direita de onde foi iniciado, alterando a propriedade de estilo "esquerda".
+Chame essa função a cada 50 milissegundos. Seu gato agora deve estar se movendo pela tela da esquerda para a direita. Viva!
+
+Ver Solução
+
+Bônus nº 1 : quando o gato alcançar a mão direita da tela, reinicie-o no lado esquerdo ("0px"). Portanto, eles devem continuar andando da esquerda para a direita pela tela, para todo o sempre.
+
+Ver Solução
+
+Bônus # 2 : Quando o gato alcançar a mão direita da tela, faça-o recuar. Eles devem continuar andando para sempre e sempre.
+
+Ver Solução
+
+Bônus nº 3 : quando o gato chegar ao meio da tela, substitua o img pela imagem de um gato dançando, mantenha-o dançando por 10 segundos e depois substitua o img pela imagem original e faça com que continue a caminhada.
+
+var img = document.getElementsByTagName('img')[0];
+img.style.left = '0px';
+function catWalk() {
+  img.style.left = (parseInt(img.style.left) + 10) + 'px';
+}
+window.setInterval(catWalk, 50);
+Bonus #1: When the cat reaches the right-hand of the screen, restart them at the left hand side ("0px"). So they should keep walking from left to right across the screen, forever and ever.
+
+See Solution
+
+var img = document.getElementsByTagName('img')[0];
+img.style.left = '0px';
+function catWalk() {
+  var currentLeft = parseInt(img.style.left);
+  img.style.left = (currentLeft + 10) + 'px';
+  if (currentLeft > (window.innerWidth-img.width)) {
+    img.style.left = '0px';
+  }
+}
+window.setInterval(catWalk, 50);
+Bonus #2: When the cat reaches the right-hand of the screen, make them move backwards instead. They should keep walking back and forth forever and ever.
+
+See Solution
+
+var img = document.getElementsByTagName('img')[0];
+img.style.left = '0px';
+var walkForwards = true;
+function catWalk() {
+  var currentLeft = parseInt(img.style.left);
+  
+  if (walkForwards && (currentLeft > (window.innerWidth-img.width))) {
+    walkForwards = false;
+  }
+  if (!walkForwards && (currentLeft <= 0)) {
+    walkForwards = true;
+  }
+  
+  if (walkForwards) {
+    img.style.left = (currentLeft + 10) + 'px';
+  } else {
+    img.style.left = (currentLeft - 10) + 'px';
+  }
+}
+window.setInterval(catWalk, 50);
+ 
+Bonus #3: When the cat reaches the middle of the screen, replace the img with an image of a cat dancing, keep it dancing for 10 seconds, and then replace the img with the original image and have it continue the walk.
+
+
+
+
+

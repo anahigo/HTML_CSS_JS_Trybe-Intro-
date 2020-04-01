@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width"/>
+    <title>JavaScript - Trabalhando com elementos </title>
+  </head>
+  <body>
+    <!--comandos html - elemento -->
+    <div id="paiDoPai">pai do pai
+        <div id="pai"> pai
+            <div id="primeiroFilho"> primeiroFilho</div>
+            <div id="elementoOndeVoceEsta">elementoOndeVoceEsta
+                <div id="primeiroFilhoDoFilho">primeiroFilhoDoFilho</div>
+                <div id="segundoEUltimoFilhoDoFilho">segundoEUltimoFilhoDoFilho</div>
+            </div>
+            Atenção!
+            <div id="terceiroFilho">terceiroFilho</div>
+            <div id="quartoEUltimoFilho">quartoEUltimoFilho</div>
+        </div>
+    </div>
+    <script> 
+    //Parte I
+    // Acesse o elemento elementoOndeVoceEsta
+    var elementoA = document.querySelector("#elementoOndeVoceEsta");
+    console.log(elementoA)
+    // Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele
+    var elementoB = elementoA.parentNode;
+    elementoB.style.color = "red";
+    //Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+    var elementoC = document.querySelector("#primeiroFilhoDoFilho");
+    elementoC.innerText = "Criando Texto 1";
+    //Acesse o primeiroFilho a partir de pai.
+    var elementoD = document.querySelector("#pai");
+    var elementoE = elementoD.firstChild;
+    console.log(elementoE)
+    //Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+    var elementoF = elementoA.previusElementSibling;
+    console.log(elementoF)
+    //Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+    var elementoG = elementoD.parentNode;
+    console.log(elementoG)
+    //Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+    var elementoH = elementoA.nextElementSibling;
+    console.log(elementoH)
+    </script>
+</body>
+</html>
