@@ -1,2 +1,2 @@
-# HTML_CSS_JS_Trybe
-Exercícios HTML, CSS E JS
+# SH,HTML_CSS_JS_Trybe
+Exercise SH, HTML, CSS E JS
