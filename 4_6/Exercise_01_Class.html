@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width"/>
+    <title>JavaScript - Trabalhando com elementos </title>
+  </head>
+  <body>
+    <button id="btn" type="button">
+      Clique aqui!
+    </button>
+    <div id="div-colorida" style="border: 4px solid green;">
+      Ao clicar na caixa, o texto será alterado!
+    </div>
+    
+    <script>
+/*Como você pôde ver, esse código vai criar dois elementos: um botão e um quadrado com um texto dentro. Além disso, ele vai colocar a tag script no seu HTML e código JavaScript lá dentro.
+
+No vídeo, você viu a utilização do evento click. Que tal alterar o evento e ver o que acontece? Digite mouseover como parâmetro da função addEventListener, no lugar de click, e confira o funcionamento.*/
+
+      const botao = document.querySelector('#btn');
+      const caixaColorida = document.querySelector('#div-colorida');
+            
+      function abreCaixa() {
+        let textoOriginal = 'Ao clicar na caixa, o texto será alterado!';
+        let textoAlterado = 'Texto alterado! Clique novamente para voltar ao original';
+                
+        if (caixaColorida.innerText === textoOriginal){
+          caixaColorida.innerText = textoAlterado;
+        }
+        
+        else {
+          caixaColorida.innerText = textoOriginal;
+        }
+      }
+    
+      botao.addEventListener('mouseover', abreCaixa);
+      
+    </script>
+</body>
+</html>

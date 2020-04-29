@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    div.parteII {
+      font-size: 30px;
+      background-color: black;
+      color: white;
+      text-align: center;
+      width: 500px;
+      height: 100px;
+    }
+
+  </style>
+
+  </head>
+  
+  <body>
+    
+    <!-- Parte I 
+    1 - Recupere o elemento que contém o título da página e faça algo com ele, como alterá-lo para o nome do seu filme favorito.
+    2 - Agora recupere o segundo parágrafo e use sua criatividade para alterá-lo.
+    3 - Por fim, recupere o subtítulo e altere-o também.
+    Parte II
+    1 - Adicione ao seu HTML uma classe com alguns estilos para os seus dois parágrafos.
+    2 - Recupere os seus parágrafos via código JavaScript, usando a função getElementsByClassName;
+    3 - Altere algum estilo do primeiro deles.
+    4 - Recupere o subtítulo pela tag.-->
+    <!--Parte I-->
+    
+    <h2 id="page-title">Título</h2>
+    <p class="paragraph">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p class="second-paragraph">Segundo parágrafo!</p>
+    
+    <!--Parte II-->
+    <div class="parteII">
+      <p>Exercício 1 - Parte II</p>
+      <p>Exercicio 1 - Parte II </p>
+    </div>
+    <div class="parteII">
+      <p class="test1">Exercício 1 - Parte II</p>
+      <p class="test1">Exercicio 1 - Parte II </p>
+    </div>
+    <script>
+
+      //Parte I
+      var title = document.querySelector("#page-title");
+      var paragraph = document.querySelector(".paragraph");
+      var subtitle = document.querySelector("#subtitle");
+      title.innerText = "Na natureza selvagem";
+      paragraph.style.color = "red";
+      paragraph.style.backgroundColor = "yellow";
+      paragraph.style.width = "500px";
+      subtitle.style.fontSize = "40px";
+      subtitle.style.textAlign = "center"; 
+      
+      //Parte II
+      var divisonI = document.querySelectorAll(".parteII");
+      divisonI.style.backgroundColor = "white";
+      divisonI.style.color = "black";
+    </script>
+  </body>
+</html>
+
+
