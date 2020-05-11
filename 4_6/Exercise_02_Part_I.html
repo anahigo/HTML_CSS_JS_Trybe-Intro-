@@ -35,9 +35,16 @@
     <button id="area-button">Calculate</button> 
     <br><br>
     <div id="solution"></div>
-    <!--Add a script tag, and add the functions from the calculator exercise (view the solution if you haven't done it yet).
+<!--Add a script tag, and add the functions from the calculator exercise (view the solution if you haven't done it yet).
 For each operation, create an event listener for the button, and when it's clicked, find the value of the appropriate input and show the result of the calculation in the solution div.
-Bonus: respond to key presses so that the user doesn't have to click the button. -->
+Bonus: respond to key presses so that the user doesn't have to click the button.
+1 - Adicionar tag <script></script>
+2 - Adicionar as funções do exercicio da calculadora
+3 - Para cada operação - evento para o botão, quando clicar
+4 - encontrar o valor de entrada e mostrar o resultado na div solution 
+5 - Bônus: responda às teclas pressionadas para que o usuário não precise clicar no botão.
+-->
+
     <script>
       //Square
       function squareNumber(num) {
@@ -45,30 +52,33 @@ Bonus: respond to key presses so that the user doesn't have to click the button.
         console.log(`The result os squaring the number ${num} is ${squaredNumber}`);
         return squaredNumber;
       }
-      let squareButton = document.querySelectorAll("button#square-button");
+
+      let squareButton = document.getElementById("square-button");
       squareButton.addEventListener("click", function() {
-        let num = document.querySelectorAll("input#square-input").value;
-        document.querySelectorAll("div#solution").innerHTML = squareNumber(num);
+        let num = document.getElementById("square-input").value;
+        document.getElementById("solution").innerHTML = squareNumber(num);
       });
       
-      //Half Of
+      //Half
       function halfOf(num) {
         let half = num / 2;
         console.log(`Half of ${num} is ${half}`);
-        return resultHalfOf;
+        return half;  
       }
-      let halfButton = document.querySelectorAll("button#half-button");
+
+      let halfButton = document.getElementById("half-button");
       halfButton.addEventListener("click", function() {
-        let num = document.querySelectorAll("input#half-input").value;
-        document.querySelectorAll("div#solution").innerHTML = halfOf(num);
+        let num = document.getElementById("half-input").value;
+        document.getElementById("solution").innerHTML = halfOf(num);
       });
-      
-      //Percent Of
+
+      //Percent
       function percentOf(num1, num2) {
         let percent = (num1/num2) * 100;
-        console.log(`${num1} is percent % of ${num2}`);
+        console.log(`${num1} is ${percent} % of ${num2}`);
         return percent;
-      }     
+      }
+
       let percentButton = document.querySelectorAll("button#percent-button");
       percentButton.addEventListener("click", function() {
         let num1 = document.querySelectorAll("input#percent1-input").value;
@@ -82,11 +92,13 @@ Bonus: respond to key presses so that the user doesn't have to click the button.
       console.log(`The area of circle with radius ${radius} is ${area}`);
       return area;
       }
+
       let areaButton = document.querySelectorAll("button#area-button");
       areaButton.addEventListener("click", function() {
         let num = document.querySelectorAll("input#area-input").value;
         document.querySelectorAll("div#solution").innerHTML = areaOfCircle(num);
-      });
+      });  
+  
     </script>
   </body>
 </html>

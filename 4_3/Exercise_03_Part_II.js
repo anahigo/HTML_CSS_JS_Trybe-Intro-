@@ -1,19 +1,21 @@
-/*3 - Faça um for/in que mostre todas as chaves do objeto.
-Valor esperado no console:
-  personagem
-  origem
-  nota
-  recorrente
+/* 3 - Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
+Array de teste: [2, 4, 6, 7, 10, 0, -3];.
+Valor esperado no retorno da função: 6. 
 
+------Resumo Enunciado------
+- função 
+- recebe array de numeros inteiros 
+- retorna o índice de menor valor
 */
 
-let info = {
-  personagem: "Margarida",
-  origem: "Pato Donald",
-  nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
-  recorrente: "Sim"
-};
+function smallValueIndex(arrayNumbers){
+  let valueIndex = 0
+  for (let index in arrayNumbers) {
+    if(arrayNumbers[valueIndex] > arrayNumbers[index]) {
+      valueIndex = index;
+    }
+  }
+  return valueIndex;
+}    
 
-for (let i in info) {
-  console.log(i);
-}
+console.log(smallValueIndex([2,3,6,7,10,1]));

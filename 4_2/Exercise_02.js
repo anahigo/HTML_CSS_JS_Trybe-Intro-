@@ -19,7 +19,7 @@
 let n = 10;
 let inputLine = ''; 
 
-for (let index = 1; index <= n; index++) {
-  inputLine += '*';  
+for (let index = 1; index <= n; index++) { //index++ == index + 1
+  inputLine += '*';  //inputLine = inputLine + '*'
   console.log(inputLine);
 }

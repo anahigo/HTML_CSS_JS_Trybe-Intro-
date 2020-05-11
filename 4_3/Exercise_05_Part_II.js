@@ -1,29 +1,32 @@
-/*5 - Agora, defina um segundo objeto com a mesma estrutura (as mesmas chaves) do primeiro e os seguintes valores: “Tio Patinhas”, “Christmas on Bear Mountain, Dell’s Four Color Comics #178”, “O último MacPatinhas”, “Sim”.
-Valor esperado no console:
-Margarida e Tio Patinhas
-Pato Donald e Christmas on Bear Mountain, Dell's Four Color Comics #178
-Namorada do personagem principal nos quadrinhos do Pato Donald e O último MacPatinhas
-Ambos recorrentes // Atenção para essa última linha!
+/* 5 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+Array de teste: [2, 3, 2, 5, 8, 2, 3];.
+Valor esperado no retorno da função: 2. 
+
+------Resumo Enunciado------
+- função 
+- recebe array de numeros inteiros 
+- retorna o valor que mais se repete
 */
 
-let info = {
-  personagem: "Margarida",
-  origem: "Pato Donald",
-  nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
-  recorrente: "Sim"
-};
+function moreRepeated(arrayNumbers){
+  let countRepeat = 0;
+  let countNumbers = 0;
+  let indexRepeatNumbers = 0;
 
-let info2 = {
-  personagem: "Tio Patinhas",
-  origem: "Christmas on Bear Mountain, Dells Four Color Comics #178",
-  nota: "O último MacPatinhas",
-  recorrente: "Sim"
-};
-
-for (let i in info, info2) {
-  if(info[i] === info2[i]) {
-    console.log("Ambos recorrente")
-  }else { 
-    console.log(info[i], "e", info2[i])
+  for (let index in arrayNumbers) {
+    let checkNumbers = arrayNumbers[index];
+  for (let index2 in arrayNumbers) {
+    if( checkNumbers === arrayNumbers[index2]) {
+      countNumbers ++;
+    }
   }
+    if (countNumbers > countRepeat) {
+      countRepeat = countNumbers;
+      indexRepeatNumbers = index;
+    }
+    countNumbers = 0;
+  }
+  return arrayNumbers[indexRepeatNumbers];
 }
+
+console.log(moreRepeated([2, 3, 5, 8, 2, 3, 2]));

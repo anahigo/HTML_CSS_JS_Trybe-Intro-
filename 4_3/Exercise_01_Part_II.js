@@ -1,12 +1,30 @@
-/*1 - Imprima no console uma mensagem de boas-vindas para a personagem acima, incluindo seu nome.
-Valor esperado no console: 
-Bem-vinda, Margarida
+/*1 - Crie uma função que receba uma string e retorne true se for um palíndromo , ou false, se não for.
+Exemplo de palíndromo: arara.
+verificaPalindrome("arara");
+Retorno esperado: true
+verificaPalindrome("desenvolvimento");
+Retorno esperado: false
+
+------Resumo Enunciado------
+- função 
+- recebe string 
+- retorna true se for palindromo ou false se nao for palidromo
 */
 
-let info = {
-  personagem: "Margarida",
-  origem: "Pato Donald",
-  nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
-};
+function checkingPalindrome(word) {
+  let arrayLetters = word.split('');
+  let isPalindrome = true; 
 
-console.log('Bem-vinda,', info.personagem)
+  for (let index in arrayLetters){
+    if (arrayLetters[index] !== arrayLetters[(arrayLetters.length - 1) - index]) {
+      isPalindrome = false;
+    }
+
+    if(index <= (arrayLetters.length / 2) + 1)
+      break;
+  }
+  return isPalindrome
+}
+
+console.log(checkingPalindrome("arara"));
+console.log(checkingPalindrome("macarrao"));   

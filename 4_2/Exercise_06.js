@@ -10,7 +10,7 @@ Um número primo é um número que só é divisível por 1 e por ele mesmo, ou s
 
 let number = 97;
 
-for (let index = 2; index <= number / 2 + 1; index++) {
+for (let index = 2; index <= number / 2 + 1; index++) { //index++ == index + 1
   if (number % index === 0) {
     console.log(`${number} isn't prime!`);
     break;

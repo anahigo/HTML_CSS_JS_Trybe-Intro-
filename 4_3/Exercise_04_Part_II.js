@@ -1,18 +1,22 @@
-/*4 - Faça um novo for/in, mas agora mostre todos os valores das chaves do objeto.
-Valor esperado no console:
-  Margarida
-  Pato Donald
-  Namorada do personagem principal nos quadrinhos do Pato Donald
-  Sim
+/* 4 - Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+Array de teste: ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];.
+Valor esperado no retorno da função: Fernanda.  
+
+------Resumo Enunciado------
+- função 
+- recebe array de nomes 
+- retorna o onome com maior quantidade caracter
 */
 
-let info = {
-  personagem: "Margarida",
-  origem: "Pato Donald",
-  nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
-  recorrente: "Sim"
-};
-
-for (let i in info) {
-  console.log(info[i])
+function largerName(arrayNames) {
+  let largerName = arrayNames[0];
+  for (let index in arrayNames) {
+    if (largerName.length < arrayNames[index].length) {
+      largerName = arrayNames[index];
+    }
+  }
+  return largerName;
 }
+
+
+console.log(largerName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));

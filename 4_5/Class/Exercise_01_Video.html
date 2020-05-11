@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width"/>
+    <title>JavaScript - Trabalhando com elementos </title>
+  </head>
+  <body>
+    <div id="linux"> 
+        <div class="ubuntu">Ubuntu
+            <div class="elementeryos">Elementery OS</div>
+        </div>
+        <div class="debian">Debian</div>
+    </div>
+    <script> 
+    // comandos js - acessando elemento
+        console.log(
+            document.querySelector(".elementaryos").parentNode.parentNode
+        )
+    //comandos js -  criando elemento
+        console.log(
+            document.createElement("p")
+            document.createElement("div")
+        )
+        var img = document.createElement("img");
+        img.src="http://lorempixel.com/400/200/";
+        console.log(img)
+
+        var p = document.createElement("p")
+        p.innerHTML = "olá, tudo bem?"
+        console.log(p)
+        
+    //comandos js -  adicionando elemento
+        var versa = document.createElement("p");
+        versa.innerHTML = "versa";
+
+        var sentra = document.createElement("p");
+        sentra.innerHTML = "versa";
+
+        document.getElementById("nissan").appendChild(versa);
+        document.getElementById("nissan").appendChild(sentra);
+    //comandos js -  removendo elemento
+        document.getElementById("nissan").removeChild(versa);
+    </script>
+</body>
+</html>
+
+
+
+
+

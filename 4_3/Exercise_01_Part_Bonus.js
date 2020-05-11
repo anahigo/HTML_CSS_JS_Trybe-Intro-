@@ -55,7 +55,7 @@ function romans(roman) {
     if (arrayNumbers[index] < arrayNumbers[index + 1]) {
       arrayNumbers[index + 1] = arrayNumbers[index + 1] - arrayNumbers[index];
     } else {
-      result += arrayNumbers[index];
+      result += arrayNumbers[index]; // result = result + arrayNumbers[index]
     }
   return result;
 }

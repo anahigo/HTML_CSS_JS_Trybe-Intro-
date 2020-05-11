@@ -23,16 +23,16 @@ let lineEmpty = (n + 1) / 2;
 let left = lineEmpty;
 let right= lineEmpty;
 
-for (let x = 0; x <= lineEmpty; x++) {
-  for (y = 1; y <= n; y++) {
+for (let x = 0; x <= lineEmpty; x++) { //x++ == x + 1
+  for (y = 1; y <= n; y++) { //y++ == y + 1
     if (y > right && y < left) {
-      inputLine = inputLine + symbol;
+      inputLine += symbol; //inputLine = inputLine + symbol
     } else {
-      inputLine = inputLine + ' ';
+      inputLine += ' '; //inputLine = inputLine + ' '
     }
   }
   console.log(inputLine);
   inputLine = '';
-  right--;
-  left++;
+  right--; //right-- == right - 1
+  left++; //left++ == left + 1
 }

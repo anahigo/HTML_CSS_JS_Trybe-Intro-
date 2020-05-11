@@ -1,32 +1,12 @@
-/* 1- Faça cinco programas, um para cada operação aritmética básica. Seu programa deve ter duas variáveis, a e b, definidas no começo com os valores que serão operados. Faça programas para:
+/*1 - Imprima no console uma mensagem de boas-vindas para a personagem acima, incluindo seu nome.
+Valor esperado no console: 
+Bem-vinda, Margarida
+*/
 
-Adição - a + b
-Subtracão - a - b
-Multiplicação - a * b
-Divisão - a / b
-Módulo - a % b */
+let info = {
+  personagem: "Margarida",
+  origem: "Pato Donald",
+  nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
+};
 
-let a = 2020;
-let b = 1983;
-
-function addition(a, b) {
-  return a + b;
-}
-
-function substraction(a, b) {
-  return a - b;
-}
-
-function multiplication(a, b) {
-  return a * b;
-}
-
-function division(a, b) {
-  return a / b;
-}
-
-function remainder(a, b) {
-  return a % b;
-}
-
-
+console.log('Bem-vinda,', info.personagem)

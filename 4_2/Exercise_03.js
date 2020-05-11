@@ -21,16 +21,15 @@ let inputLine = '';
 let symbol = "*";
 let inputPosition = n;
         
-for (let i = 0; i < n ; i+=1) {
-    for (let j = 0; j <= n; j+=1) {
-        if (j < inputPosition) { 
-            inputLine = inputLine + ' ';
-        }
-        else {
-            inputLine = inputLine + symbol;
-        }
+for (let indexY = 0; indexY < n ; indexY++) { //indexY++ == indexY + 1
+  for (let indexX = 0; indexX <= n; indexX++) { //index++ == index + 1
+    if (indexX < inputPosition) { 
+      inputLine += ' '; //inputLine = inputLine + ' '
+    } else {
+      inputLine += symbol; //inputLine = inputLine + symbol
     }
-    console.log(inputLine); 
-    inputPosition = inputPosition - 1;
-    inputLine = '';
+  }
+  console.log(inputLine); 
+  inputPosition -= 1; //inputPosition  = inputPosition - 1
+  inputLine = '';
 }

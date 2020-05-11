@@ -15,17 +15,29 @@
     <div id="story"></div>
     <!--Add a script tag to the bottom of the page for your code.
 Add an event listener to the button so that it calls a makeMadLib function when clicked.
-In the makeMadLib function, retrieve the current values of the form input elements, make a story from them, and output that in the story div (like "Pamela really likes pink cucumbers.")-->
+In the makeMadLib function, retrieve the current values of the form input elements, make a story from them, and output that in the story div (like "Pamela really likes pink cucumbers.")
+1 - Criar tag <script></script> - ok 
+2 - Criar um evento no botão para chamar função -
+3 - função vai recuperar os valores de entrada do formulário -
+4 - Criar uma frase com as palavras - 
+-->
     <script>
-      let lButton = document.querySelector('button#lib-button');
-      function lib(){
-        var story = document.querySelector("#story");
-        var person = document.querySelector("#person").value;
-        var adjective = document.querySelector("#adjective").value;
-        var noun = document.querySelector("#noun").value;
-        story.innerHTML = `${person} ${adjective} ${noun}`;
+      //Variável
+      let button = document.getElementById('lib-button');
+      
+      //Função
+      function makeMadLib() {
+        //Variável
+        let story = document.getElementById('story');
+        let noun = document.getElementById('noun').value;
+        let adjective = document.getElementById('adjective').value;
+        let person = document.getElementById('person').value;
+        //Concatenação
+        story.innerHTML = ` The ${person} is ${adjective}, beause ${noun}`;
       }
-      lButton.addEventListener('click', lib);
+      //Evento
+      button.addEventListener('click', makeMadLib);
+
     </script>
   </body>
 </html>

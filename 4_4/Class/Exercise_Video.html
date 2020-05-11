@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>JavaScript - DOM e seletores </title>
+    <script src=""></script>
+    <script></script>
+  </head>
+  <body>
+    <!--comandos html - seletores id-->
+    <div id="familia-mae">Franchon</div>
+    <div id="familia-pai">Higo do Prado</div>
+    <!--comandos html seletores class-->
+    <div class="gato">Miau-Miau</div>
+    <div class="gato">Miau-Miau, Miau-Miau</div>
+    <div class="cachorro">Au-Au</div>
+    <!--comandos html seletores tag-->
+    <h1>Ana</div>
+    <h2>Higo</div>
+    <!--comandos html seletores querySelector -->
+    <div id="teste1">1</div>
+    <div class="teste2">2</div>
+    <div class="teste2">22</div>
+    <div class="teste2">222</div>
+    <p>teste</p>
+    <!--comandos html seletores querySelectorAll-->
+    <div class="teste">1</div>
+    <div class="teste">2</div>
+    <div class="teste">3</div>
+    <div class="pai">
+        <div class="filho">11</div>
+        <div class="filho">22</div>
+        <div class="filho">33</div>       
+    </div>
+    <div class="paizao">
+        <div class="filho">111</div>
+        <div class="filho">222</div>
+        <div class="filho">333</div>       
+    </div>
+    <!--comandos js - seletores id-->
+    <script src=""></script>
+    <script> 
+    console.log (
+        document.getElementById("familia-mae").innerHTML
+    )
+    //comandos js - seletores class
+    console.log (
+        document.getElementsByClassName("gato")[1].innerHTML
+    )
+    //comandos js - seletores tag
+    console.log (
+        document.getElementsByTagName("h1")[0].innerHTML
+    )
+    //comandos js - seletores querySelector
+    console.log (
+        document.querySelector("#teste1").innerHTML
+        document.querySelector(".teste2").innerHTML //acessa somente o primeiro elemento
+        document.querySelector("p").innerHTML
+    )
+    //comandos js - seletores querySelectorAll
+    console.log (
+        document.querySelectorAll(".teste").innerHTML
+        document.getElementById("pai").document.querySelectorAll(".filho")[0].innerHTML
+        document.getElementById("paizao").document.querySelectorAll(".filho")[0].innerHTML
+    )
+        
+    </script>
+</body>
+</html>
+
+

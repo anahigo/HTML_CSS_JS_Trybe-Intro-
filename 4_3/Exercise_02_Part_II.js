@@ -1,20 +1,23 @@
-/*
-2 - Insira no objeto uma nova propriedade com o nome de chave “recorrente” e o valor “Sim” e, em seguida, imprima o objeto no console.
-Valor esperado no console:
-  {
-    personagem: 'Margarida',
-    origem: 'Pato Donald',
-    nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
-    recorrente: 'Sim'
-  };
+/* 2 - Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
+Array de teste: [2, 3, 6, 7, 10, 1];.
+Valor esperado no retorno da função: 4.
+
+------Resumo Enunciado------
+- função 
+- recebe array de numeros inteiros 
+- retorna o índice de maior valor
 */
 
-let info = {
-  personagem: "Margarida",
-  origem: "Pato Donald",
-  nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
-  recorrente: "Sim"
-};
+function higherValueIndex(arrayNumbers){
+  let valueIndex = 0
+  for (let index in arrayNumbers) {
+    if(arrayNumbers[valueIndex] < arrayNumbers[index]) {
+      valueIndex = index;
+    }
+  }
+  return valueIndex;
+}    
+  
+console.log(higherValueIndex([2,3,6,7,10,1]));
 
-console.log(info)
-
+ 

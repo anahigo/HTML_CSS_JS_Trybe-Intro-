@@ -20,17 +20,16 @@ let inputLine = [];
 let base = [];
 let middle = [];
 let symbol = '*';
-let lineEmpty = (n + 1) / 2; 
 let left = 1;
 let right = n - 2;
 
-for (let y = 0; y < n; y++) {
+for (let y = 0; y < n; y++) { //y++ == y + 1
   base[y] = symbol;
 }
 
 middle[0] = base;
-for (let x = 1; x < n; x++) {
-  for (let y = 0; y < n; y++) {
+for (let x = 1; x < n; x++) {//x++ == x + 1
+  for (let y = 0; y < n; y++) {//y++ == y + 1
     if (y === left|| y === right) {
       inputLine[y] = symbol;
     } else {
@@ -39,16 +38,16 @@ for (let x = 1; x < n; x++) {
   }
 
   middle[x] = inputLine;
-  left++;
-  right--;
+  left++; //left == left + 1
+  right--; //rigth == rigth - 1
   inputLine = [];
   if (left > right) break;
 }
 
 let result = '';
-for (let x = middle.length - 1; x >= 0; x--) {
-  for (let y = 0; y < n; y++) {
-    result = result + middle[x][y];
+for (let x = middle.length - 1; x >= 0; x--) { //x-- == x - 1
+  for (let y = 0; y < n; y++) { //y++ == y + 1
+    result += middle[x][y]; //result = result + middle[x][y]
   }
   console.log(result);
   result = '';

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 4.7</title>
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+    /* geral */
+    body {
+      background-color: gray;
+      color: gray;
+      font-family: 'Mali', cursive;
+      font-weight: bolder;
+      font-size: 20pt;
+    }
+
+    /* header */ 
+    header {
+      color: white;
+      font-size: 20pt;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .settings {
+      border: 4px double white;
+    }
+
+    .divbutton {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding-bottom: 20px;
+    }
+
+    .blockButton {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    .backgroundColor, .fontSize, .color, .lineHeight, .fontFamily {
+      border: none;
+      font-family: 'Mali', cursive;
+      font-size: 15pt;
+      margin: 5px;
+      padding: 5px 20px;
+    }
+
+    /* article e aside */
+    article {
+      text-align: center;
+    }
+
+    section {
+      background-color: white;
+      border-radius: 20px;
+      margin: 30px auto;
+      width: 1000px;
+      padding: 50px;
+    }
+
+    /* footer */ 
+    footer {
+      color: white;
+      font-size: 20pt;
+      text-align: center;
+    }
+  </style>
+
+  <script>
+    window.onload = function() {
+      let buttons = document.querySelectorAll("button"); 
+  
+      for (let i = 0; i < buttons.length; i++){ //i++ == i + 1 
+        let buttonClassValue = buttons[i].className;
+        let valueStyleLocalStorage = localStorage.getItem(buttonClassValue);  
+        // console.log("buttonClassValue: ", buttonClassValue); //Testando
+        // console.log(valueStyleLocalStorage); //Testando
+        if (typeof buttonClassValue !== 'undefined' && buttonClassValue !== null){
+          document.body.style[buttonClassValue] = valueStyleLocalStorage;
+        }
+      }
+                
+      for (let i = 0; i < buttons.length; i++){ //i++ == i + 1 
+        buttons[i].addEventListener('click',function(event){
+        let buttonvalue = event.target.innerHTML;
+        let buttonClassValue = buttons[i].className;
+        // console.log(buttonClassValue);
+        // console.log(buttonvalue);
+        localStorage.setItem(buttonClassValue,buttonvalue);
+        document.body.style[buttonClassValue] = buttonvalue;
+        })
+      }
+    } 
+    //localStorage.clear()
+  </script>
+</head>
+
+<body>
+
+  <!-- header -->
+  <header>
+    <div class='title'>
+      <h1>Poesias de Cecília Meireles que marcaram  minha infância</h1>
+      <h3>Dedico a minha mãe que sempre recitava-as para mim!</h3>
+    </div>
+
+    <div id='settings' class='settings'>
+      <h4>Aqui você pode alterar as configurações do texto, para uma leitura melhor!</h4>
+
+      <div class="divbutton">
+        <div class="blockButton">
+          <h5>Cor do fundo:</h5>
+          <button id="black-background" class="backgroundColor">Black</button>
+          <button id="grey-background" class="backgroundColor">Pink</button>
+          <button id="white-background" class="backgroundColor">Grey</button>
+        </div>
+
+        <div class="blockButton">
+          <h5>Tamanho da fonte:</h5>
+          <button class="fontSize">15pt</button>
+          <button class="fontSize">20pt</button>
+          <button class="fontSize">25pt</button>
+        </div>
+
+        <div class="blockButton">
+          <h5>Cor do texto:</h5>
+            <button class="color">Black</button>
+            <button class="color">Pink</button>
+            <button class="color">Grey</button>
+        </div>
+
+        <div class="blockButton">
+          <h5>Espaçamento entre <br> as linhas do texto:</h5>
+            <button class="lineHeight">15pt</button>
+            <button class="lineHeight">20pt</button>
+            <button class="lineHeight">25pt</button>
+        </div>
+
+        <div class="blockButton">
+          <h5>Tipo da fonte:</h5>
+            <button class="fontFamily">Courier</button>
+            <button class="fontFamily">Mali</button>
+            <button class="fontFamily">Helvetica</button>
+        </div> 
+      </div>
+  </header>
+
+  <!-- article -->
+  <article>
+    <section id="sections">
+      <h2>Ou isto ou aquilo</h2>
+      <p>Ou se tem chuva e não se tem sol<br>
+        ou se tem sol e não se tem chuva!<br><br>
+  
+        Ou se calça a luva e não se põe o anel,<br>
+        ou se põe o anel e não se calça a luva!<br><br>
+  
+        Quem sobe nos ares não fica no chão,<br>
+        quem fica no chão não sobe nos ares.<br><br>
+  
+        É uma grande pena que não se possa<br>
+        estar ao mesmo tempo em dois lugares!<br><br>
+  
+        Ou guardo o dinheiro e não compro o doce,<br>
+        ou compro o doce e gasto o dinheiro.<br><br>
+
+        Ou isto ou aquilo: ou isto ou aquilo ...<br>
+        e vivo escolhendo o dia inteiro!<br><br>
+
+        Não sei se brinco, não sei se estudo,<br>
+        se saio correndo ou fico tranqüilo.<br><br>
+
+        Mas não consegui entender ainda<br>
+        qual é melhor: se é isto ou aquilo.
+      </p>
+    </section>
+
+    <section id="sections">
+      <h2>O último andar</h2>
+      <p>No último andar é mais bonito:<br>
+        do último andar se vê o mar.<br>
+        É lá que eu quero morar.<br><br>
+           
+        O último andar é muito longe:<br>
+        custa-se muito a chegar.<br>
+        Mas é lá que eu quero morar.<br><br>
+           
+        Todo o céu fica a noite inteira<br>
+        sobre o último andar.<br>
+        É lá que eu quero morar.<br><br>
+           
+        Quando faz lua, no terraço<br>
+        fica todo o luar.<br>
+        É lá que eu quero morar.<br><br>
+           
+        Os passarinhos lá se escondem,<br>
+        para ninguém os maltratar:<br>
+        no último andar.<br><br>
+           
+        De lá se avista o mundo inteiro:<br>
+        tudo parece perto, no ar.<br>
+        É lá que eu quero morar:<br><br>
+        
+        no último andar
+      </p>
+    </section>
+
+    <section id="sections">
+      <h2>As duas velhinhas</h2>
+      <p>Duas velhinhas muito bonitas,<br>
+        Mariana e Marina,<br>
+        estão sentadas na varanda:<br>
+        Marina e Mariana.<br><br>
+           
+        Elas usam batas de fitas,<br>
+        Mariana e Marina,<br>
+        e penteados de tranças:<br>
+        Marina e Mariana.<br><br>
+           
+        Tomam chocolate, as velhinhas,<br>
+        Mariana e Marina,<br>
+        em xícaras de porcelana:<br>
+        Marina e Mariana.<br><br>
+           
+        Uma diz: “Como a tarde é linda,<br>
+        não é Marina?”<br>
+        A outra diz: “Como as ondas dançam,<br>
+        não é, Mariana?<br><br>
+            
+        “Ontem, eu era pequenina”,<br>
+        diz Marina.<br>
+        “Ontem, nós éramos crianças”,<br>
+        diz Mariana.<br>
+           
+        E levam à boca as xicrinhas,<br>
+        Mariana e Marina,<br>
+        as xicrinhas de porcelana:<br>
+        Marina e Mariana.<br><br>
+           
+        Tomam chocolate, as velhinhas,<br>
+        Mariana e Marina.<br>
+        E falam de suas lembranças,<br>
+        Marina e Mariana.
+      </p>
+    </section>
+
+    <section id="sections">
+      <h2>A bailarina</h2>
+      <p>Esta menina<br>
+        tão pequenina<br>
+        quer ser bailarina.<br><br>
+           
+        Não conhece nem dó nem ré<br>
+        mas sabe ficar na ponta do pé.<br><br>
+           
+        Não conhece nem mi nem fá<br>
+        mas inclina o corpo para cá e para lá.<br><br>
+           
+        Não conhece nem lá nem si,<br>
+        mas fecha os olhos e sorri.<br><br>
+           
+        Roda, roda, roda com os bracinhos no ar<br>
+        e não fica tonta bem sai do lugar.<br><br>
+           
+        Põe no cabelo uma estrela e um véu<br>
+        e diz que caiu do céu.<br><br>
+           
+        Esta menina<br>
+        tão pequenina<br>
+        quer ser bailarina.<br><br>
+           
+        Mas depois esquece todas as danças,<br>
+        e também quer dormir como as outras crianças
+      </p>
+    </section>
+
+    <section id="sections">
+      <h2>As Meninas</h2>
+      <p>Arabela<br>
+        abria a janela.<br><br>
+
+        Carolina<br>
+        erguia a cortina.<br><br>
+
+        E Maria<br>
+        olhava e sorria:<br>
+        "Bom dia!"<br><br>
+          
+        Arabela<br>
+        foi sempre a mais bela.<br><br>
+          
+        Carolina,<br>
+        a mais sábia menina.<br><br>
+           
+        E Maria<br>
+        apenas sorria:<br>
+        "Bom dia!<br><br>
+          
+        Pensaremos em cada menina<br>
+        que vivia naquela janela;<br>
+        uma que se chamava Arabela,<br>
+        outra que se chamou Carolina.<br><br>
+
+        Mas a nossa profunda saudade<br>
+        é Maria, Maria, Maria,<br>
+        que dizia com voz de amizade:<br>
+        "Bom dia!"
+      </p>
+    </section>
+
+    <section id="sections">
+      <h2>O eco</h2>
+      <p>O menino pergunta ao eco<br>
+        onde é que ele se esconde.<br>
+        Mas o eco só responde: “Onde? Onde?”<br><br>
+         
+        O menino também lhe pede:<br>
+        “Eco, vem passear comigo!”<br><br>
+         
+        Mas não sabe se o eco é amigo<br>
+        ou inimigo.<br><br>
+         
+        Pois só lhe ouve dizer:<br>
+        “Migo!”
+      </p>
+    </section>
+
+    <section id="sections">
+      <h2>A avó do menino</h2>
+      <p>A avó<br>
+        vive só.<br>
+        Na casa da avó<br>
+        o galo liró<br>
+        faz “cocorocó!”<br>
+        A avó bate pão-de-ló<br>
+        e anda um vento-t-o-tó<br>
+        na cortina de filó.<br><br>
+         
+        A avó<br>
+        vive só.<br>
+        Mas se o neto meninó<br>
+        mas se o neto Ricardó<br>
+        mas se o neto travessó<br>
+        vai à casa da avó,<br>
+        os dois jogam dominó.
+      </p>
+    </section>
+  </article>
+
+  <!-- footer -->
+  <footer id='footer' class='footer'>
+    <p>&copy; Ana Higo - Trybe Student</p>
+  </footer>
+</body>
+</html>

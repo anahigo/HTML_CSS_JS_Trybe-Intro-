@@ -1,20 +1,18 @@
-/* 4- Faça um programa que, dado um valor definido numa variável, retorne “positive” se esse valor for positivo, “negative” se for negativo e “zero” caso contrário.  
-
-------Interpretando o enunciado------
-- number
-- se number for maior que 0 imprima positive 
-- se number for menor que 0 imprima negative
-- se number for igual a 0 imprima zero
+/*4 - Faça um novo for/in, mas agora mostre todos os valores das chaves do objeto.
+Valor esperado no console:
+  Margarida
+  Pato Donald
+  Namorada do personagem principal nos quadrinhos do Pato Donald
+  Sim
 */
 
-function number(n) {
-  if (n > 0) {
-    return 'positive';
-  } else if (n < 0) {
-    return 'negative';
-  } else {
-    return 'zero';
-  }
-}    
+let info = {
+  personagem: "Margarida",
+  origem: "Pato Donald",
+  nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
+  recorrente: "Sim"
+};
 
-console.log(number(0))
+for (let value in info) {
+  console.log(info[value])
+}
