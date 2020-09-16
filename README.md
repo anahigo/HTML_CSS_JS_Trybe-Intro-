@@ -22,15 +22,14 @@ This repository contains all the summaries, exercises and projects developeds by
 ##### Block 4: Introduction - JavaScript
 - [x] 4-1: *JavaScript - Getting Started*
 - [x] 4-2: *JavaScript - For Array and Loop*
-- [x] 4-3: *JavaScript - Programming Logic and Algorithms*
-- [x] 4-4: *JavaScript - Objects and functions*
+- [x] 4-3: *JavaScript - Objects and functions*
+- [x] 4-4: *JavaScript - DOM and selectors*
+- [x] 4-5: *JavaScript - Working with elements*
+- [x] 4-6: *JavaScript - Events*
+- [x] 4-7: *JavaScript - Web Storage*
 ##### Block 5: JavaScript - Projects
-- [x] 5-1: *JavaScript - DOM and selectors*
-- [x] 5-2: *JavaScript - Working with elements*
-- [x] 5-3: *JavaScript - Events*
-- [x] 5-4: *JavaScript - Web Storage*
-- [x] 5-5: *Project - Meme Generator*
-- [x] 5-6: *Project - Art with Pixels*
-- [x] 5-7: *Project - To Do List*
-- [x] 5-7: *Project - Guess the Color*
-- [x] 5-7: *Project - Mysterious Card*
+- [x] 5-1: *Project - Meme Generator*
+- [x] 5-2: *Project - Art with Pixels*
+- [x] 5-3: *Project - To Do List*
+- [x] 5-4: *Project - Guess the Color*
+- [x] 5-5: *Project - Mysterious Card*
