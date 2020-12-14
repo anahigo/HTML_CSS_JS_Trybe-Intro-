@@ -37,7 +37,6 @@ This repository contains all the summaries, exercises and projects developeds by
 - [x] 5-7: *Project - Guess the Color*
 - [x] 5-7: *Project - Mysterious Card*
 
-## Front-end development :hourglass_flowing_sand:
 ##### Block 6: Introduction - Front-end
 - [x] 6-1: *HTML & CSS - Forms*
 - [x] 6-2: *JavaScript libraries and CSS frameworks*
