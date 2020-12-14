@@ -22,7 +22,7 @@ let inputLine = '';
 
 for(let indexY = 0; indexY < n; indexY++) { //indexY++ == indexY + 1
   let inputLine = '';
-  for(let iindexX = 0; indexX < n; indexX++){ //indexX++ == indexX + 1
+  for(let indexX = 0; indexX < n; indexX++){ //indexX++ == indexX + 1
     inputLine += '*' //inputLine = inputLine + '*'
   }
   console.log(inputLine)

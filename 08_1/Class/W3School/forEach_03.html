@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <p>For each element in the array: multiply the value with 10 and update the element value:</p>
+
+    <p id="demo"></p>
+
+    <script>
+      var numbers = [65, 44, 12, 4];
+
+
+      function myFunction(item, index, arr) {
+        arr[index] = item * 10;
+      }
+
+      numbers.forEach(myFunction)
+      
+      document.getElementById("demo").innerHTML = numbers;
+
+    </script>
+
+  </body>
+</html>

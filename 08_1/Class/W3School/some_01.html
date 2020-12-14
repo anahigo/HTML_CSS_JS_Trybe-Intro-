@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <p>Click the button to check if any of the elements in the array has a value of 18 or more.</p>
+
+    <button onclick="myFunction()">Try it</button>
+  
+    <p id="demo"></p>
+
+    <script>
+      var ages = [3, 10, 18, 20];
+
+      function checkAdult(age) {
+        return age >= 18;
+      }
+
+      function myFunction() {
+        document.getElementById("demo").innerHTML = ages.some(checkAdult);
+      }
+    </script>
+
+  </body>
+</html>
+

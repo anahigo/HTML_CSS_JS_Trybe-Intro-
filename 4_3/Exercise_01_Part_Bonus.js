@@ -1,4 +1,4 @@
-/*(Difícil) Faça um programa que receba uma string em algarismos romanos e retorne o número que a string representa.
+/*(Difícil) Faça um programa que receba uma string em algarismos romans e retorne o número que a string representa.
 Atenção! Esse exercício já apareceu no processo seletivo de uma grande multinacional!
 
 Dicas:
@@ -26,7 +26,7 @@ Atenção! Quando você tem um número pequeno à direita de um número grande, 
 
 ------Resumo Enunciado------
 - programa  
-- recebe string de algarismo romanos - string é um array
+- recebe string de algarismo romans - string é um array
 - retorna o número que a string representa
 - objeto - cada letra - um numeral
 - quando: 
@@ -34,30 +34,38 @@ Atenção! Quando você tem um número pequeno à direita de um número grande, 
     .número pequeno à esquerda do número grande - subtrair 
 */
 
-function romans(roman) {
-  let romanNumbers = {
-    I: 1,
-    V: 5,
-    X: 10,
-    L: 50,
-    C: 100,
-    D: 500,
-    M: 1000,
-  };
-  let arrayNumbers = [];
-  let result = 0;
+const roman = {
+  'I': 1,
+  'V': 5,
+  'X': 10,
+  'L': 50,
+  'C': 100,
+  'D': 500,
+  'M': 1000,
+};
 
-  for (let index in roman) {
-    arrayNumbers[index] = romanNumbers[roman[index]];
-  }
+function romans(text) {
+  text = text.toUpperCase();
+  let number = 0;
+  let vector = [];
 
-  for (let index in arrayNumbers) {
-    if (arrayNumbers[index] < arrayNumbers[index + 1]) {
-      arrayNumbers[index + 1] = arrayNumbers[index + 1] - arrayNumbers[index];
-    } else {
-      result += arrayNumbers[index]; // result = result + arrayNumbers[index]
+  for(let i = 0; i < text.length ; i++) {
+    for(key in roman) {
+      if(key === text[i]) {
+        vector.push(roman[key]);
+      }
     }
-  return result;
+  }
+  
+  for(let i = 0; i < vector.length ; i++) {
+    if(vector[i] < vector[i + 1]) {
+      number += vector[i + 1] - vector[i];
+      i++;
+    } else {
+      number += vector[i];
+    }
+  }
+  return number;
 }
 
-console.log(romans(MMXVIII))
+console.log(romans('viii'));

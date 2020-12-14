@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Exercicio Aula 6.02 - Front-End</title>
+    <link rel='stylesheet' href='bulma.min.css'>
+    <link rel='stylesheet' href='DatePickerX.min.css'>
+    <link rel='stylesheet' href='validation.min.css'>
+    <link rel='stylesheet' href='style.css'>
+  </head>
+
+  <body>
+    <div>
+      <!-- header -->
+      <header>
+        <h1>Resumo Currículo</h1>
+      </header>
+
+      <!-- section -->
+      <section class='section'>
+          <form name='formuser' id='myForm'>
+
+          <!-- Dados Pessoais -->
+          <div>
+            <h2>Dados Pessoais</h2><br>
+
+            <div class='field'>
+              <label class='label' for='cNome'>Nome:</label>
+              <div class='control'>
+                <input 
+                  type='text'
+                  name='nome'
+                  class='input'
+                  id='cNome' 
+                  maxlength='40' 
+                  placeholder='Nome completo' 
+                  required
+                >
+              </div>
+            </div>
+
+            <div class='field'>
+              <label class='label' for='cEmail'>Email:</label>
+              <div class='control'>
+                <input 
+                  type='text' 
+                  name='email'
+                  class='input'
+                  id='cEmail' 
+                  placeholder='Email mais usado' 
+                  pattern='^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$' 
+                  maxlength='50' 
+                  required
+                >
+              </div>
+            </div>
+
+            <div class='field'>
+              <label class='label' for='cCpf'>CPF:</label>
+              <div class='control'>
+                <input 
+                  type='text' 
+                  name='cpf'
+                  class='input'
+                  id='cCpf'
+                  placeholder='Ex: 000.000.000-00' 
+                  pattern='^([0-9]{3}\.){2}([0-9]{3}-)([0-9]{2})$'
+                  maxlength='14' 
+                  required
+                >
+              </div>
+            </div>
+
+            <div class='field'>
+              <label class='label' for='cEnd'>Endereço:</label>
+              <div class='control'>
+                <input 
+                  type='text' 
+                  name='endereco'
+                  class='input'
+                  id='cEnd' 
+                  placeholder='Ex: Rua, Travessa, Av.' 
+                  maxlength='200' 
+                  required
+                >
+              </div>  
+            </div>
+
+            <div class='field'>
+              <label class='label' for='cCid'>Cidade:</label>
+              <input 
+                type='text' 
+                name='cidade'
+                class='input'
+                id='cCid'  
+                placeholder='Cidade onde mora' 
+                maxlength='28' 
+                required
+              >
+            </div>
+
+            <div class='field'>
+              <label class='label' for='cEst'>Estado:</label>
+              <div class='control'>
+                <div class='select'>
+                  <select name='estado' id='cEst'></select>
+                </div>
+              </div>
+            </div>
+
+            <div class='field'>
+              <div class='control'>
+                <h3>Tipo de Residência:</h3>
+                <label class='label' for='cCasa'>
+                  <input 
+                    type='radio' 
+                    name='tipoRes' 
+                    class='radio'
+                    id='cCasa' 
+                    value='casa' 
+                    checked 
+                    required
+                  >
+                  Casa
+                </label>
+
+                <label class='label' for='cApt'>
+                  <input 
+                    type='radio' 
+                    name='tipoRes' 
+                    class='radio'
+                    id='cApt' 
+                    value='apartamento' 
+                    required
+                  >
+                  Apartamento
+                </label>
+              </div>
+            </div>              
+          </div><br>
+
+          <!-- Dados Emprego -->
+          <div>
+            <h2>Último Emprego</h2><br>
+            <div class='field'>
+              <label class='label' for='cResumo'>Resumo do currículo:</label>
+              <div class='control'>
+                <textarea 
+                  name='resumo' 
+                  id='cResumo' 
+                  class='textarea'
+                  placeholder='...' 
+                  maxlength='1000' 
+                  required>
+                </textarea>
+              </div>
+            </div>
+
+            <div class='field'>
+              <label class='label' for='cCargo'>Cargo:</label>
+              <div class='control'>
+                <input 
+                  type='text' 
+                  name='cargo'
+                  class='input' 
+                  id='cCargo' 
+                  placeholder='Ultimo cargo' 
+                  maxlength='40' 
+                  required
+                >
+              </div>  
+            </div>
+
+            <div class='field'>
+              <label class='label' for='cDesc'>Descrição do cargo:</label>
+              <div class='control'>
+                <input 
+                  type='text'
+                  name='descricao' 
+                  class='input'
+                  id='cDesc'
+                  placeholder='O que você fazia?' 
+                  maxlength='500' 
+                  required
+                >
+              </div>  
+            </div>
+
+            <div class='field'>
+              <label class='label' for='cData'>Data de início:</label>
+              <div class='control'>
+                <input 
+                  type='text' 
+                  name='dataInic' 
+                  class='input'
+                  id='cData' 
+                  placeholder='Quando começou?' 
+                  pattern='(\d{2})[-.\/](\d{2})[-.\/](\d{4})' 
+                  required
+                >
+              </div>
+            </div>
+
+            <p class='data-error'></p>
+
+          </div>
+        </form>
+
+        <!-- Buttons -->
+        <div>
+          <button class='button is-success is-fullwidth' id='btEnviar' type='submit'>Enviar</button><br>
+          <button class='button is-danger is-fullwidth' id='btResetar' type='reset'>Limpar</button>
+        </div>
+      </div>
+      
+       <!-- Resultado -->
+      <div class='resultado'>
+        <h2>Dados do Candidato</h2>
+
+        <div>
+          <p>Nome: 
+            <span class='spannome'></span></p>
+        </div>
+
+        <div>
+          <p>Email: 
+            <span class='spanemail'></span></p>
+        </div>
+
+        <div>
+          <p>CPF:
+            <span class='spancpf'></span></p>
+        </div>
+
+        <div>
+          <p>Endereço: 
+            <span class='spanendereco'></span></p>
+        </div>
+
+        <div>
+          <p>Cidade:
+            <span class='spancidade'></span></p>
+        </div>
+
+        <div>
+          <p>Estado:
+            <span class='spanestado'></span></p>
+        </div>
+        <div>
+          <p>Tipo de Risidência:
+            <span class='spantipoRes'></span></p>
+        </div>
+
+        <div>
+          <p>Resumo do Currículo:
+            <span class='spanresumo'></span></p>
+        </div>
+        <div>
+          <p>Cargo:
+            <span class='spancargo'></span></p>
+        </div>
+
+        <div>
+          <p>Descrição do cargo:
+            <span class='spandescricao'></span></p>
+        </div>
+
+        <div>
+          <p>Data de início:
+            <span class='spandataInic'></span></p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <p>&copy; Ana Higo - Trybe Student</p>
+    </footer>
+
+    <!-- js -->
+    <script src="DatePickerX.min.js"></script>
+    <script src="validation.min.js"></script>
+    <script src="script.js"></script>
+
+  </body>
+
+</html>

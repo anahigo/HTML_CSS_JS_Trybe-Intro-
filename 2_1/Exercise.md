@@ -94,8 +94,3 @@ Password for https:user@github.com: digite sua senha
 
 9 - Vá até o seu GitHub e verifique as novas alterações. 
  - Atualize e verifique se os arquivos subiram 
-
- 
-
- 
-Crisfranchonhigo

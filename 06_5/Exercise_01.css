@@ -1,0 +1,90 @@
+body {
+  font-size: 12pt;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 20pt;
+}
+
+h2 {
+  font-size: 18pt;
+}
+
+img {
+	max-width: 100%;
+}
+
+figure {
+	margin: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14pt;
+    margin: 20px;
+    background-color: blueviolet;
+  }
+
+  h1 {
+    font-size: 22pt;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 20pt;
+  }
+
+  figure {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  body {
+    background: violet;
+    font-size: 16pt;
+    margin: 60px;
+  }
+
+  h1 {
+    font-size: 24pt;
+  }
+
+  h2 {
+    font-size: 22pt;
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  figure {
+    flex-basis: 40%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    background: pink;
+    font-size: 18pt;
+    margin: 80px;
+  }
+
+  h1 {
+    font-size: 26pt;
+  }
+
+  h2 {
+    font-size: 24pt;
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+}

@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+* {
+/*  border: 1px solid red; */
+}
+
+body {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* -----------CONTAINER 1----------*/
+
+.flex-container {
+  border: 3px solid #333;
+  width: 600px;
+  display:flex;
+  flex-flow: row wrap;
+  margin-bottom: 50px;
+}
+
+.box {
+  background-color: orange;
+  border: 2px solid gray;
+  padding: 0 35px;
+  border-radius: 5px;
+}
+
+
+
+/* -----------CONTAINER 2----------*/
+
+.flex-container:nth-child(2) > .box {
+  background-color: #bdaaf0;
+  /*margin:10px; */
+}
+
+.flex-container:nth-child(2) > .box:nth-child(3) {
+  margin-left: auto;
+}
+
+.flex-container:nth-child(2) {
+  height: 400px;
+  justify-content: flex-start;
+  /*flex-direction: column;*/
+}

@@ -1,0 +1,219 @@
+body {
+	font-family:'Courier New', Courier, monospace;
+}
+
+#cabecalho {
+	background-color:gray;
+}
+
+#titulo {
+	color:indigo;
+	font-weight: bolder;
+	padding: 10px;
+	text-align: center;
+}
+
+#menu-navegacao {
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+	text-transform: uppercase;
+}
+
+li {
+	display: inline-block;
+	font-weight: bold;
+}
+
+li:hover {
+	background-color: pink;
+}
+
+a {
+	color: indigo;
+	text-decoration: none;
+}	
+
+a:hover {
+	color: pink;
+	text-decoration: underline;
+}
+
+article {
+	background-color: white;
+}
+
+aside {
+	background-color:gray;
+}
+
+footer {
+	background-color:gray;
+}
+
+h2 {
+	color: indigo;
+	font-weight: bold;
+}
+
+h3 {
+	color: indigo;
+	padding: 10px;
+}
+
+h4 {
+	padding: 20px;
+}
+
+h5 {
+	padding: 10px
+}
+
+p {
+	padding: 0px 50px;
+	text-indent: 20px;
+}
+
+.table {
+	padding: 0px 25px;
+}
+
+aside p {
+	padding: 0px 20px;
+	text-indent: 20px;
+}
+
+footer p{
+	padding: 10px;
+}
+
+img {
+	padding: 10px 0px 20px;
+}
+
+.rodape {
+	text-align: center;
+	font-size: medium;
+	font-weight: 900;
+}
+
+@media screen and (max-width: 576px) {
+	#titulo {
+		font-size: 25px;
+	}
+	
+	li {
+		font-size: 15px;
+		padding: 0px 10px
+	}
+
+	h2 {
+		font-size: 20px;
+		padding: 10px 50px;
+	}
+
+	p {
+		padding: 0px 10px;
+	}
+
+	img {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 576px) and (max-width: 1200px) {
+	#titulo {
+		font-size: 30px;
+	}
+	
+	li {
+		font-size: 20px;
+		padding: 0px 10px
+	}
+
+	aside {
+		max-height: 6750px;
+		min-height: 6100px;
+	}
+
+	h2 {
+		font-size: 25px;
+		padding: 10px 50px;
+	}
+	
+	h3 {
+		font-size: 18px;
+		text-align: center;
+	}
+	
+	h4 {
+		font-size: 15px;
+		text-align: center;
+	}
+	
+	p {
+		padding: 0px 25px;
+	}
+
+	aside p {
+		padding: 0px 5px;
+		text-indent: 20px;
+		font-size: 12px;
+	}
+
+	img {
+		width: 100%;
+		margin: auto;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#titulo {
+		font-size: 50px;
+	}
+	
+	li {
+		font-size: 25px;
+		padding: 0px 20px
+	}
+	
+	aside {
+		height: 600px;
+	} 
+
+	h2 {
+		padding: 10px 100px;
+	}
+	
+	h3 {
+		font-size: 25px;
+	}
+	
+	h4 {
+		font-size: 20px;
+	}
+	
+	aside p {
+		font-size: medium;
+	}
+
+	img {
+		width: 100%;
+		margin: auto;
+	}
+}
+
+@media print {
+	nav, 
+	footer,
+	h3 {
+		visibility: hidden;
+	}
+
+	img {
+		width: 100%;
+		margin: auto;
+	}
+}

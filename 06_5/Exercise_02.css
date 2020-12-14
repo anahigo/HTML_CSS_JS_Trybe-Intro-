@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: rgb(100, 100, 100);
+  color: white;
+  font-family: 'Berkshire Swash', cursive;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.aside-one, 
+.aside-two {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+header p {
+  color: pink;
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+  text-indent: 20px;
+}
+
+.container header {
+  background-color: rgb(63, 27, 63);
+  margin: 0;
+  width: 100%;
+}
+
+.container header nav ul li {
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 15pt;
+  font-weight: 600;
+  padding: 2px;
+}
+
+footer {
+  background-color: rgb(63, 27, 63);
+  margin: 0;
+  padding: 40px;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .container header p {
+    font-size: 25pt;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .container header nav {
+    text-align: center;
+    width: 100%;
+  }
+
+  .aside-one ul li , .aside-two ul li {
+    font-size: 12pt;
+  }
+
+  .main-content {
+    padding: 10%;
+    margin: auto
+  }
+
+  h1 {
+    font-size: x-large;
+  }
+
+  footer {
+    padding: 10px 40px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  body {
+    background-color: rgb(100, 100, 100);
+    color: white;
+  }
+  
+  h1,
+  h2,
+  h3,
+  header p {
+    color: rgb(63, 27, 63);;
+  }
+  
+  .container header {
+    background-color: pink;
+  }
+  
+  footer {
+    background-color: pink;
+  }
+
+  p {
+    font-size: 16pt;
+  }
+  
+  .container header p {
+    font-size: 30pt;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .container header nav {
+    text-align: center;
+    width: 100%;
+  }
+
+  .aside-one ul li , .aside-two ul li {
+    font-size: 14pt;
+  }
+
+  .main-content {
+    padding: 10%;
+    margin: auto
+  }
+
+  h1 {
+    font-size: xx-large;
+  }
+
+  footer {
+    padding: 10px 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background-color: black;
+    color: white;
+  }
+  
+  h1,
+  h2,
+  h3,
+  header p {
+    color: pink;
+  }
+  
+  .container header {
+    background-color:  rgb(63, 27, 63);
+  }
+  
+  footer {
+    background-color: rgb(63, 27, 63);
+  }
+
+  p {
+    font-size: 18pt;
+  }
+  
+  .container header p {
+    font-size: 30pt;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .container header nav {
+    text-align: center;
+    width: 100%;
+  }
+
+  .aside-one ul li , .aside-two ul li {
+    font-size: 16pt;
+  }
+
+  .main-content {
+    padding: 10%;
+    margin: auto
+  }
+
+  h1 {
+    font-size: xx-large;
+  }
+
+  footer {
+    padding: 10px 120px;
+  }
+}

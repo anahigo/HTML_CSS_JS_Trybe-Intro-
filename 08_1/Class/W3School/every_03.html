@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <p>Click the button to check if all the answer values in the array is the same.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+      var survey = [
+        { name: "Steve",   answer: "Yes"},
+        { name: "Jessica", answer: "Yes"},
+        { name: "Peter",   answer: "Yes"},
+        { name: "Elaine",  answer: "No"}
+      ];
+
+      function isSameAnswer(el,index,arr) {
+      // Do not test the first array element, as you have nothing to compare to
+        if (index === 0){
+          return true;
+        }
+        else {
+      //do each array element value match the value of the previous array element
+          return (el.answer === arr[index - 1].answer);
+        }
+      }
+
+      function myFunction() {
+        document.getElementById("demo").innerHTML = survey.every(isSameAnswer);
+      }
+    </script>
+
+  </body>
+</html>

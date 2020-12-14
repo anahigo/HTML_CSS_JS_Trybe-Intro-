@@ -1,0 +1,100 @@
+/* http://www.flexboxdefense.com/ - 01 - 09*/
+
+/*01*/
+.grupo-torre-1 {
+  display: flex;
+  justify-content: center;
+}
+
+/*02*/
+.grupo-torre-1 {
+  display: flex;
+  justify-content: flex-end;
+}
+.grupo-torre-2 {
+  display: flex;
+  justify-content: center;
+}
+.grupo-torre-3 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*03*/
+.grupo-torre-1 {
+  display: flex;
+  justify-content: center;
+}
+.grupo-torre-2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*04*/
+.grupo-torre-1 {
+  display: flex;
+  align-items: flex-end;
+}
+.grupo-torre-2 {
+  display: flex;
+  align-items: flex-end;
+}
+
+/*05*/
+.tower-group-1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.tower-group-2 {
+  display: flex;
+  justify-content: center;
+}
+.tower-group-3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/*06*/
+.tower-group-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*07*/
+.tower-group-1 {
+  display: flex;
+  flex-direction: column;
+}
+.tower-group-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+/*08*/
+.tower-group-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.tower-group-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*09*/
+.tower-group-1 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+.tower-group-2 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
